@@ -1,0 +1,102 @@
+---
+title: "Problemas de Combinatoria"
+author: "Javier René Quispe Tenorio"
+date: "11/11/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(reticulate)
+```
+
+
+## Problema 1.1
+
+En una carrera en la que participan diez caballos ¿de cuántas maneras diferentes se pueden dar los cuatro primeros lugares?
+
+$$V_{n=10}^{k=4} = \frac{10!}{(10-4)!}$$
+
+```{python}
+from itertools import permutations
+perm = permutations(range(10),4)
+
+print(len(list(perm)))
+```
+
+## Problema 2
+
+Una empresa de reciente creación encarga a un diseñador gráfico la elaboración de su logotipo, indicando que ha seleccionar exactamente tres colores de una lista de seis.¿Cuántos grupos tienen para elegir el diseñador?
+
+$$C_{n=6}^{k=3} = {6\choose 3}$$
+```{python}
+from itertools import combinations
+combs = combinations(["rojo","verde","azul","lila","amarillo","blanco"], 3)
+for c in combs:
+  print(c)
+```
+```{python}
+from itertools import combinations
+combs = combinations(["rojo","verde","azul","lila","amarillo","blanco"], 3)
+print(len(list(combs)))
+```
+
+## Problema 3.
+
+¿Cuántas maneras diferentes, de cuatro letras, se pueden formar con la palabra byte?
+
+$$P_4 = 4!$$
+
+```{python}
+from itertools import permutations
+words = permutations(["b", "y", "t", "e"])
+for word in words:
+  print(word)
+```
+```{python}
+from itertools import permutations
+words = permutations(["b", "y", "t", "e"])
+print(len(list(words)))
+```
+
+## Problema 4
+
+¿De cuantas maneras diferentes se pueden elegir el director y el subdirector de un departamento formado por 50 mienbros?
+
+$$V_{n=50}^{k=2} = \frac{50!}{(50-2)!}$$
+```{python}
+from itertools import permutations
+candidatos = permutations(range(50),2)
+print(len(list(candidatos)))
+```
+
+## Problema 5
+
+Con once empleados ¿cuántos comités de empresa de cinco personas se pueden formar?
+
+$$C_{n=11}^{k=5}={11\choose5}$$
+
+
+```{r}
+choose(11, 5)
+```
+```{r}
+library(gtools)
+combinations(n=11, r=5) -> lista_comites
+head(lista_comites)
+tail(lista_comites)
+nrow(lista_comites)
+```
+
+## Problema 6
+
+¿Cuántas maneras distintas hay de colocar quince libros diferentes en una estantería si queremos que el de Probabilidades esté el primero y el de Estadística en el tercero?
+
+
+hola
+```{python}
+
+```
+
