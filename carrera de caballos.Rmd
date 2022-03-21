@@ -124,3 +124,28 @@ morse_long_3
 nrow(morse_long_1)+nrow(morse_long_2)+nrow(morse_long_3)
 ```
 
+## Problema 8
+
+Un supermercado organiza una rifa con un premio de una botella de cava para todas las papeletas que tengan las dos ultimas cifras iguales a las correspondientes dos últimas cifras del número premiado en el sorteo de Navidad. Supongamos que todos los décimos tienen cuatro cifras y que existe un único décimo(participación) de cada numeración ¿Cuantas botellas repartirá el supermercado?
+
+reaspuesta: 100
+
+## Problema 9
+
+¿Cuántas palabras diferentes podemos formar con todas las letras de la palabra estadística?
+
+```{r}
+Pr<-function(n,k){
+    if (n==sum(k))
+        {
+        Pr<-factorial(n)/prod(factorial(k))
+    }
+    else
+        {
+        Pr<-'NAN'
+    }
+    return(Pr)
+}
+Pr(11,c(2,2,2,2,1,1,1))
+```
+
