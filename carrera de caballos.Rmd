@@ -94,9 +94,33 @@ nrow(lista_comites)
 
 ¿Cuántas maneras distintas hay de colocar quince libros diferentes en una estantería si queremos que el de Probabilidades esté el primero y el de Estadística en el tercero?
 
+$$P_{n=13} = 13!$$
+```{r}
+factorial(13)
+```
+ 
+## Problema 7
 
-hola
-```{python}
+¿Cuántos caracteres diferentes podemos utilizar a lo sumo a tres símbolos de los utilizados en el alfabeto Morse?
 
+```{r}
+morse = c(".","_")
+morse_long_1 = gtools::permutations(n=2, v=morse, r=1, repeats.allowed = TRUE)
+morse_long_1
+```
+
+```{r}
+morse = c(".","_")
+morse_long_2 = gtools::permutations(n=2, v=morse, r=2, repeats.allowed = TRUE)
+morse_long_2
+```
+
+```{r}
+morse = c(".","_")
+morse_long_3 = gtools::permutations(n=2, v=morse, r=3, repeats.allowed = TRUE)
+morse_long_3
+```
+```{r}
+nrow(morse_long_1)+nrow(morse_long_2)+nrow(morse_long_3)
 ```
 
