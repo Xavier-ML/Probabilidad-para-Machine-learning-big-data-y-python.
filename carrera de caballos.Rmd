@@ -149,3 +149,57 @@ Pr<-function(n,k){
 Pr(11,c(2,2,2,2,1,1,1))
 ```
 
+## Problema 10
+
+En una tienda de regalos hay relojes de arena con cubetas de colores, y no hay diferencia alguna entre las dos cubetas que forman cada reloj. Si hay cuatro colores posibles y el color de los dos recipientes puede coincidir ¿cuántos modelos de reloj de arena puede ofrecer el establecimiento?
+
+```{r}
+Cnk<-function(n,k){
+    if (n>=0)
+        {
+        Cnk<-factorial(n+k-1)/(factorial(k)*factorial(n-1))
+    }
+    else
+        {
+        Cnk<-'NAN'
+    }
+    return(Cnk)
+}
+Cnk(4,2)
+
+```
+
+## Problema 11
+
+En una partida de parchís gana aquel jugador que consigue alcanzar antes con sus cuatro fichas la llegada. Si hay cuatro jugadores y la partida continua hasta que todos han completado el recorrido ¿cuántos órdenes de llegada hay para las dieciséis fichas?
+
+```{r}
+factorial(16)/(factorial(4)^4)
+
+colores=c("azul","rojo","amarillo","verde")
+colores16 = rep(colores, 4)
+colores16
+
+partidas_1000 = matrix(replicate(1000, sample(colores16,size = 16, replace = FALSE)), ncol = 16)
+object.size(partidas_1000)
+```
+
+## Problema 12
+
+Se han de repartir cinco becas entre diez españoles y seis extranjeros, de manera que se den tres a españoles y dos a extranjeros ¿De cuántas maneras se puede hacer el reparto?
+
+```{r}
+Cnk<-function(n,k){
+    if (n>=0)
+        {
+        Cnk<-factorial(n)/(factorial(k)*factorial(n-k))
+    }
+    else
+        {
+        Cnk<-'NAN'
+    }
+    return(Cnk)
+}
+Cnk(10,3)*Cnk(6,2)
+```
+
