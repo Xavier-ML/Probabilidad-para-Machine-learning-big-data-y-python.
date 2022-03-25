@@ -203,3 +203,6 @@ Cnk<-function(n,k){
 Cnk(10,3)*Cnk(6,2)
 ```
 
+# Referencias
+
+
