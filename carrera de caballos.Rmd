@@ -205,4 +205,5 @@ Cnk(10,3)*Cnk(6,2)
 
 # Referencias
 
-
+* https://rpubs.com/revite19/711719
+* https://www.youtube.com/watch?v=iCMdELC2DSQ&list=PLO2KKTlztSATPqt_Ewl5SAgLyVJQ1VI4Y&index=1
